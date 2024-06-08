@@ -1,6 +1,6 @@
 package com.github.etm.controller.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.github.etm.model.Peixe;
 
@@ -9,7 +9,7 @@ public class FormPeixe {
 	private String nome; 
 	private String descricao;
 	private double pesoMaximo;
-	private LocalDateTime dataCatalogacao;
+	private LocalDate dataCatalogacao;
 	public String getNome() {
 		return nome;
 	}
@@ -28,10 +28,10 @@ public class FormPeixe {
 	public void setPesoMaximo(double pesoMaximo) {
 		this.pesoMaximo = pesoMaximo;
 	}
-	public LocalDateTime getDataCatalogacao() {
+	public LocalDate getDataCatalogacao() {
 		return dataCatalogacao;
 	}
-	public void setDataCatalogacao(LocalDateTime dataCatalogacao) {
+	public void setDataCatalogacao(LocalDate dataCatalogacao) {
 		this.dataCatalogacao = dataCatalogacao;
 	}
 	

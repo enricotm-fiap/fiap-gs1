@@ -1,10 +1,21 @@
 package com.github.etm.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "peixes")
 public class Peixe {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	
 	@Column(nullable = false, length = 50)
 	private String nome;
@@ -16,7 +27,7 @@ public class Peixe {
 	private double pesoMaximo;
 	
 	@Column(nullable = false)
-	private LocalDateTime dataCatalogacao;
+	private LocalDate dataCatalogacao;
 
 	public String getNome() {
 		return nome;
@@ -42,11 +53,11 @@ public class Peixe {
 		this.pesoMaximo = pesoMaximo;
 	}
 
-	public LocalDateTime getDataCatalogacao() {
+	public LocalDate getDataCatalogacao() {
 		return dataCatalogacao;
 	}
 
-	public void setDataCatalogacao(LocalDateTime dataCatalogacao) {
+	public void setDataCatalogacao(LocalDate dataCatalogacao) {
 		this.dataCatalogacao = dataCatalogacao;
 	}
 

@@ -10,25 +10,24 @@
 </head>
 <body>
     <div th:replace="layout/header :: headerFragment"></div>
-	<div th:replace="layout/menu :: menuFragment"></div>
 
 	<div id="content">
 	
     <div class="container">
         <h3>Cadastro de Peixes</h3>
 
-        <form th:action="@{/cargos/save}" th:object="${cargo}" method="post">
+        <form th:action="@{/peixes/save}" th:object="${peixe}" method="post">
             <div class="input-group mb-3">
 
                 <div class="input-group-prepend">
                     <div class="input-group-text">Nome</div>
                 </div>
-                <input type="text" class="form-control" id="nome" th:field="*{nome}" readonly>
+                <input type="text" class="form-control" id="nome" th:field="*{nome}">
             </div>
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <div class="input-group-text">Decricao</div>
+                    <div class="input-group-text">Decrição</div>
                 </div>
                 <input type="text" class="form-control" id="descricao" th:field="*{descricao}">
             </div>
@@ -39,17 +38,16 @@
                 </div>
                 <input type="text" class="form-control" id="pesoMaximo" th:field="*{pesoMaximo}">
             </div>
-            
+              
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <div class="input-group-text">Data Catalogação</div>
                 </div>
-                <input type="text" class="form-control" id="dataCatalogacao" th:field="*{dataCatalogacao}">
+                <input type="date" class="form-control" id="dataCatalogacao" th:field="*{dataCatalogacao}">
             </div>
-            
                                
 			<button type="submit" class="btn btn-primary btn-sm">Confirmar</button>
-            <a th:href="@{/cargos}" class="btn btn-secondary btn-sm">Cancelar</a>
+            <a th:href="@{/peixes}" class="btn btn-secondary btn-sm">Cancelar</a>
         </form>
         
     </div>

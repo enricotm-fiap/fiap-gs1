@@ -38,7 +38,7 @@ public class PeixeController {
 	public String save(@ModelAttribute FormPeixe peixe) {		
 		Peixe entity = peixe.toModel();
 		peixeRepository.save(entity);
-		return "redirect:/peixes";
+		return "redirect:/peixes/add";
 	}
 
 }
